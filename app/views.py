@@ -6,7 +6,18 @@ from app import app
 @app.route('/index')
 def index():
     user = {'nickname': 'Rambo'}
-    # 直接返回html
+    posts = [
+        {
+            'author': {'nickname': 'Tian'},
+            'body': 'Beautiful day in Wuhan!'
+        },
+
+        {
+            'author': {'nickname': 'Li'},
+            'body': 'The Avengers movie was so cool!'
+        }
+    ]
     return render_template("index.html",
                            title='Home',
-                           user=user)
+                           user=user,
+                           posts=posts)
