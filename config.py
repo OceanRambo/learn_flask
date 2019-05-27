@@ -13,16 +13,16 @@ class Config(object):
     # MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') is not None
     # MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     # MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    ADMINS = ['your-email@example.com']
+    ADMINS = ['452828172@qq.com']
 
     MAIL_SERVER = 'smtp.qq.com'
-    MAIL_PORT = '587'
+    MAIL_PORT = 587
     MAIL_USE_TLS = True
-    MAIL_USERNAME = '452828172@qq.com'
-    # MAIL_PASSWORD = "rizxuuhirzwvcbah"
-    MAIL_PASSWORD = "frdsggrjcdlhbiae"
-
-    # MAIL_DEFAULT_SENDER = "xxxxxx.hot@qq.com"  # 默认发送者
+    # MAIL_USE_SSL对应的MAIL_PORT = 465
+    MAIL_USERNAME = 'xxx@qq.com'  # 自己的QQ邮箱
+    MAIL_PASSWORD = "rizxuuhirzwvcbah"
+    # MAIL_PASSWORD = "frdsggrjcdlhbiae"     MAIL_USE_SSL对应
+    MAIL_DEFAULT_SENDER = "xxx@qq.com"  # 默认发送者， 自己的QQ邮箱
 
     POSTS_PER_PAGE = 25
 

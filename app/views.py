@@ -219,10 +219,19 @@ def reset_password(token):
     return render_template('reset_password.html', form=form)
 
 
+# 自己测试
 from app import mail
 from flask_mail import Message
 @app.route('/email_send')
-def email_Send():
-    m = Message('测试邮箱发送', sender=app.config['ADMIN'][0], recipients=['452828172@qq.com'], body='测试')
-    mail.send(m)
-    return 'success'
+def email_send():
+    m = Message('测试邮箱发送',
+                sender=app.config['ADMINS'][0],
+                recipients=['xxx@qq.com'],   # 自己的QQ邮箱
+                body='测试flask_mail')
+    try:
+        mail.send(m)
+        return '发送成功， 请注意查收'
+    except Exception as e:
+        print(e)
+        return '发送失败'
+    # return 'success'
