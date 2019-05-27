@@ -8,11 +8,12 @@
     {% endif %}
 </head>
 <body>
-    <div>微博:
+    <div>博客:
         <a href="{{ url_for('index') }}">首页</a>
         {% if current_user.is_anonymous %}
         <a href="{{ url_for('login') }}">登录</a>
         {% else %}
+        <a href="{{ url_for('user', username=current_user.username) }}">用户中心</a>
         <a href="{{ url_for('logout') }}">退出</a>
         {% endif %}
     </div>
