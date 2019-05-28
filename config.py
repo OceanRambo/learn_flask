@@ -24,6 +24,6 @@ class Config(object):
     # MAIL_PASSWORD = "frdsggrjcdlhbiae"     MAIL_USE_SSL对应
     MAIL_DEFAULT_SENDER = "xxx@qq.com"  # 默认发送者， 自己的QQ邮箱
 
-    POSTS_PER_PAGE = 25
+    POSTS_PER_PAGE = 15
 
 
